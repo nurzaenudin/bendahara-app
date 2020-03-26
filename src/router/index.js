@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Spby from '../components/Spby.vue'
+import Spby from '../views/Spby.vue'
 
 Vue.use(VueRouter)
 
