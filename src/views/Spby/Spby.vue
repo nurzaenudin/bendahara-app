@@ -1,5 +1,12 @@
 <template>
   <v-container class="my-5">
+    <v-btn text class="success" router to="/Spby/form">
+      Tambah SPBY
+<!--       <span>
+        <router-link to="/Spby/form">Tambah</router-link>
+      </span> -->
+    </v-btn>
+    <router-view></router-view>
     <v-card text class="pa-3" v-for="spby in spbys" :key="spby.nomor">
       <v-layout row wrap class="pa-3 spby" :class="spby.status">
         <v-flex>

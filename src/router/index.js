@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Spby from '../views/Spby.vue'
+import Spby from '../views/Spby/Spby.vue'
+import SpbyForm from '../views/Spby/Form.vue'
 
 Vue.use(VueRouter)
 
@@ -22,8 +23,14 @@ const routes = [
   {
     path: '/spby',
     name: 'Spby',
-    component: Spby
+    component: Spby,
   },
+  {
+    path: '/spby/form',
+    name: 'SpbyForm',
+    component: SpbyForm
+  },
+
 ]
 
 const router = new VueRouter({
