@@ -1,25 +1,25 @@
 <template>
   <nav>
-    <v-app-bar app flat>
+    <v-app-bar app text>
       <v-app-bar-nav-icon class="grey--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span>ini ibu budi</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn flat>
+        <v-btn text>
           <span>
             <router-link to="/about">About</router-link>
           </span>
         </v-btn>
 
-        <v-btn flat>
+        <v-btn text>
           <span>
             <router-link to="/">Home</router-link>
           </span>
         </v-btn>
 
-        <v-btn flat>
+        <v-btn text>
           <span>
             <router-link to="/spby">SPBy</router-link>
           </span>

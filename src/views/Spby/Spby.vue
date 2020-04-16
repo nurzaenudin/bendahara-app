@@ -2,38 +2,41 @@
   <v-container class="my-5">
     <v-btn text class="success" router to="/Spby/form">
       Tambah SPBY
-<!--       <span>
+      <!--       <span>
         <router-link to="/Spby/form">Tambah</router-link>
-      </span> -->
+      </span>-->
     </v-btn>
     <router-view></router-view>
-    <v-card text class="pa-3" v-for="spby in spbys" :key="spby.nomor">
-      <v-layout row wrap class="pa-3 spby" :class="spby.status">
-        <v-flex>
+    <v-card text class="pa-2" v-for="spby in spbys" :key="spby.nomor">
+      <v-layout row class="pa-2 spby" :class="spby.status">
+        <v-col>
           <div class="caption grey--text">Nomor SPBy</div>
           <div>{{spby.nomor}}</div>
-        </v-flex>
-        <v-flex>
+        </v-col>
+        <v-col>
           <div class="caption grey--text">Nilai</div>
           <div>{{spby.nilai}}</div>
-        </v-flex>
+        </v-col>
 
-        <v-flex>
+        <v-col>
           <div class="caption grey--text">Tanggal</div>
           <div>{{spby.tanggal}}</div>
-        </v-flex>
+        </v-col>
 
-        <v-flex>
+        <v-col>
           <div class="caption grey--text">Status</div>
           <div>
-            <v-chip
-              small
-              default
-              class="white--text caption my-2"
-              :class="spby.status"
-            >{{spby.status}}</v-chip>
+            <v-chip small default class="white--text caption" :class="spby.status">{{spby.status}}</v-chip>
           </div>
-        </v-flex>
+        </v-col>
+        <v-col>
+          <div class="caption grey--text">Action</div>
+          <div>
+            <v-btn text class="primary mx-1" small @click="editSpby(spby)">Edit</v-btn>
+            
+            <v-btn text class="error mx-1" small @click="hapusSpby(spby)">Hapus</v-btn>
+          </div>
+        </v-col>
       </v-layout>
       <v-divider></v-divider>
       <!--       <v-card-title>Nomor SPBY</v-card-title>
@@ -64,7 +67,16 @@ export default {
         status: "overdue"
       }
     ]
-  })
+  }),
+  methods:{
+    editSpby(spby){
+      console.log("edit berhasil: "+ spby.nomor);
+      
+    },
+    hapusSpby(spby){
+      console.log("hapus berhasil: " + spby.nomor)
+    }
+  }
 };
 </script>
 <style>

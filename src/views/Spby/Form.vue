@@ -11,16 +11,17 @@
 
 <script>
 export default {
-  data() {
-    return {
+  data: () => ({
+    
       nomor: "",
       nilai: "",
       tanggal: ""
-    };
-  },
+    
+  }),
   methods:{
       submit(){
-          console.log("nomor: "+this.nomor +" nilai: "+this.nilai+ " tanggal: "+this.tanggal)
+          console.log("nomor: "+this.nomor +" nilai: "+this.nilai+ " tanggal: "+this.tanggal),
+          this.$router.push({ name: 'Spby' });
       }
   }
 };
